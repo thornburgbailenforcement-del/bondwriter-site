@@ -80,7 +80,6 @@
 
       <div class="grid md:grid-cols-4 gap-10">
 
-        <!-- Starter -->
         <div class="bg-white p-8 shadow rounded-lg text-center">
           <h4 class="text-2xl font-bold mb-4">Starter</h4>
           <p class="text-3xl font-extrabold mb-4">$99/mo</p>
@@ -93,7 +92,6 @@
           </ul>
         </div>
 
-        <!-- Professional -->
         <div class="bg-white p-8 shadow rounded-lg text-center border-4 border-blue-600">
           <h4 class="text-2xl font-bold mb-4">Professional</h4>
           <p class="text-3xl font-extrabold mb-4">$199–$249/mo</p>
@@ -106,7 +104,6 @@
           </ul>
         </div>
 
-        <!-- Agency -->
         <div class="bg-white p-8 shadow rounded-lg text-center">
           <h4 class="text-2xl font-bold mb-4">Agency</h4>
           <p class="text-3xl font-extrabold mb-4">$349–$499/mo</p>
@@ -119,7 +116,6 @@
           </ul>
         </div>
 
-        <!-- Enterprise -->
         <div class="bg-white p-8 shadow rounded-lg text-center">
           <h4 class="text-2xl font-bold mb-4">Enterprise</h4>
           <p class="text-3xl font-extrabold mb-4">Custom</p>
@@ -142,10 +138,14 @@
       <h3 class="text-4xl font-bold mb-6">Contact Us</h3>
       <p class="mb-8">Ready to modernize your agency? Reach out for a demo or sales inquiry.</p>
 
-      <form class="grid gap-6 max-w-xl mx-auto">
-        <input type="text" placeholder="Your Name" class="p-4 border rounded-lg" />
-        <input type="email" placeholder="Email Address" class="p-4 border rounded-lg" />
-        <textarea placeholder="Message" class="p-4 border rounded-lg h-32"></textarea>
+      <!-- NETLIFY FORM ENABLED -->
+      <form name="contact" method="POST" data-netlify="true" class="grid gap-6 max-w-xl mx-auto">
+        <input type="hidden" name="form-name" value="contact">
+
+        <input type="text" name="name" placeholder="Your Name" class="p-4 border rounded-lg" required />
+        <input type="email" name="email" placeholder="Email Address" class="p-4 border rounded-lg" required />
+        <textarea name="message" placeholder="Message" class="p-4 border rounded-lg h-32" required></textarea>
+
         <button class="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">
           Send Message
         </button>
